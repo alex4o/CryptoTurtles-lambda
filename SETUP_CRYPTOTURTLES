@@ -1,0 +1,19 @@
+testrpc -u 0
+
+
+sale = TurtleCoinSale.at(ADDRESS)
+
+coinADDRESS = sale.token()
+
+coin = TurtleCoin.at(coinADDRESS)
+
+
+sale.sendTransaction({from:web3.eth.accounts[0], value: web3.toWei(1,"ether")})
+
+data = TurtleData.at(DATA_ADDRESS)
+
+
+data.setCommunication(coinADDRESS)
+
+
+Then data commands. I will put comments in the source files to explain what all the functions do specifically.
