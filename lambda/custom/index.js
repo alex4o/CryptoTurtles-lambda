@@ -23,7 +23,7 @@ var handlers = {
 		this.attributes.speechOutput = "Turtle " + turtleName + " created!";
 		this.attributes.repromptSpeech = "Try saying repeat.";
 
-		this.response.speak("Turtle " + turtleName + " created!").listen(this.attributes.repromptSpeech);
+		this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
 		// this.response.cardRenderer("Turtle " + turtleName + " created!", "?");
 		this.emit(':responseReady');
 
